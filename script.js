@@ -12,65 +12,18 @@ document.addEventListener('DOMContentLoaded', function() {
   
   if (downloadBtn) {
     downloadBtn.addEventListener('click', function() {
-      // Get the document content
-      const documentContent = document.querySelector('.document-content');
-      const documentTitle = document.querySelector('.document-header h1').textContent;
+      // Create a link element to download the PDF file
+      const link = document.createElement('a');
+      link.href = './MOBLOGIC LTD (1).pdf'; // Path to your PDF file
+      link.download = 'MOBLOGIC_LTD_Document.pdf'; // Name for the downloaded file
       
-      // Create a downloadable HTML file
-      const htmlContent = `
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>${documentTitle}</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            line-height: 1.6;
-            color: #333;
-        }
-        h1 {
-            color: #008080;
-            border-bottom: 2px solid #008080;
-            padding-bottom: 10px;
-        }
-        h2 {
-            color: #008080;
-            margin-top: 30px;
-        }
-        h3 {
-            color: #333;
-            margin-top: 25px;
-        }
-        p {
-            margin-bottom: 15px;
-            text-align: justify;
-        }
-    </style>
-</head>
-<body>
-    <h1>${documentTitle}</h1>
-    ${documentContent.innerHTML}
-</body>
-</html>`;
-      
-      // Create and trigger download
-      const blob = new Blob([htmlContent], { type: 'text/html' });
-      const url = window.URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = 'MOBLOGIC_LTD_Document.html';
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-      window.URL.revokeObjectURL(url);
+      // Append to body, click, and remove
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
       
       // Show success message
-      alert('Document download started!');
+      alert('PDF download started!');
     });
   }
 });
