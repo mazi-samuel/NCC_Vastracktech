@@ -1,0 +1,411 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+/* Top bar */
+.top-bar {
+  background: #f8f8f8;
+  padding: 8px 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.top-bar .container {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.top-bar i {
+  margin-right: 6px;
+  color: #008080;
+}
+
+/* Navbar */
+.navbar {
+  background: #008080;
+  padding: 12px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo img {
+  height: 100px;
+  width: 200px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ffcc00;
+}
+
+.contact-btn {
+  background: #f44336;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.contact-btn:hover {
+  background: #d32f2f;
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+  background: url('https://vastracktech.com.ng/wp-content/uploads/2023/07/hero-image.jpg') center/cover no-repeat;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.hero .overlay {
+  position: relative;
+  text-align: center;
+  z-index: 1;
+}
+
+.hero h2 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 16px;
+}
+
+/* Document Section */
+.document-section {
+  padding: 60px 0;
+  background: #f9f9f9;
+}
+
+.document-section .container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.document-header {
+  text-align: center;
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #008080;
+}
+
+.document-header h1 {
+  font-size: 36px;
+  color: #008080;
+  margin-bottom: 20px;
+}
+
+.download-container {
+  margin-top: 20px;
+}
+
+.download-btn {
+  background: #f44336;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.download-btn:hover {
+  background: #d32f2f;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.download-btn i {
+  font-size: 18px;
+}
+
+.document-content {
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  line-height: 1.6;
+}
+
+.document-content h2 {
+  color: #008080;
+  font-size: 28px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #008080;
+  padding-bottom: 10px;
+}
+
+.document-content h3 {
+  color: #333;
+  font-size: 22px;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.document-content h4 {
+  color: #008080;
+  font-size: 18px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.document-content p {
+  font-size: 16px;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+.document-content ul {
+  margin: 15px 0;
+  padding-left: 30px;
+}
+
+.document-content li {
+  font-size: 16px;
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+.document-content strong {
+  color: #008080;
+  font-weight: bold;
+}
+
+/* Footer */
+.footer {
+  background: #008080;
+  color: white;
+  padding: 60px 0 0;
+}
+
+.footer-content {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 40px;
+  padding-bottom: 40px;
+}
+
+.footer-section h3 {
+  color: white;
+  font-size: 20px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.footer-logo img {
+  height: 80px;
+  width: auto;
+  margin-bottom: 20px;
+}
+
+.company-info p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #e0f2f1;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 12px;
+}
+
+.footer-section ul li a {
+  color: #e0f2f1;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: #ffcc00;
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+}
+
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+  background: #ffcc00;
+  color: #008080;
+  transform: translateY(-2px);
+}
+
+.contact-info p {
+  color: #e0f2f1;
+  font-size: 16px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.contact-info i {
+  color: #ffcc00;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.footer-bottom {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 20px 0;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-bottom p {
+  margin: 0;
+  color: #e0f2f1;
+  font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    background: #008080;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    padding: 20px 0;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+
+  .contact-btn {
+    margin-top: 10px;
+  }
+
+  .document-header h1 {
+    font-size: 28px;
+  }
+
+  .document-content {
+    padding: 20px;
+  }
+
+  .document-content h2 {
+    font-size: 24px;
+  }
+
+  .document-content h3 {
+    font-size: 20px;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .footer-logo img {
+    height: 60px;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+
+  .contact-info p {
+    justify-content: center;
+    text-align: left;
+  }
+}
