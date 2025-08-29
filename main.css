@@ -10,6 +10,24 @@ body {
   color: #333;
 }
 
+/* Performance optimizations */
+img {
+  max-width: 100%;
+  height: auto;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
+/* Logo specific optimizations */
+.logo img {
+  height: 100px;
+  width: 200px;
+  object-fit: contain;
+  will-change: transform;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
 /* Top bar */
 .top-bar {
   background: #f8f8f8;

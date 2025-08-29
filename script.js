@@ -1,3 +1,28 @@
+// Service Worker Registration
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('./sw.js')
+      .then(function(registration) {
+        console.log('ServiceWorker registration successful');
+      }, function(err) {
+        console.log('ServiceWorker registration failed: ', err);
+      });
+  });
+}
+
+// Image Preloading and Optimization
+document.addEventListener('DOMContentLoaded', function() {
+  // Preload critical images
+  const criticalImages = [
+    './images/Vastrack Logo Portrait  PNG.png'
+  ];
+  
+  criticalImages.forEach(function(src) {
+    const img = new Image();
+    img.src = src;
+  });
+});
+
 // Mobile menu toggle
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.getElementById('nav-links');
